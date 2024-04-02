@@ -1,7 +1,13 @@
 import React from 'react';
 
-import { Row, Col, AudioCol } from './containers/flex';
+import {
+  Row,
+  Col,
+  AudioCol,
+  AudioTextCol,
+  AudioItemRow } from './containers/flex';
 import { AudioThumb } from './styled/image';
+import { AudioTitle, AudioDesc } from './styled/text';
 
 ///
 const samplePodImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Podcasts_%28iOS%29.svg/2048px-Podcasts_%28iOS%29.svg.png';
@@ -9,22 +15,19 @@ const samplePodImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/
 
 const AudioItem = () => {
   return (
-    <Row>
+    <AudioItemRow>
       <AudioCol>
         <AudioThumb src={samplePodImg} />
       </AudioCol>
-      <Col>
+      <AudioTextCol>
         <Row>
-          <h5>Podcast Title</h5>
+          <AudioTitle>Podcast Title</AudioTitle>
         </Row>
         <Row>
-          <p>Podcast Description...</p>
+          <AudioDesc>Podcast Description...</AudioDesc>
         </Row>
-      </Col>
-      <Col>
-
-      </Col>
-    </Row>
+      </AudioTextCol>
+    </AudioItemRow>
   );
 };
 
