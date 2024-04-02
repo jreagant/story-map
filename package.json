@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server .",
     "build": "webpack .",
-    "client-dev": "npx wepback --watch",
+    "client-dev": "npx webpack --mode development --watch",
+    "server-dev": "npx nodemon server/index.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "dependencies": {
     "@babel/cli": "^7.24.1",
     "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
