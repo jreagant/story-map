@@ -9,3 +9,7 @@ export const AudioDesc = styled.p`
   margin: 0;
   padding: 0;
 `;
+
+export const Expand = styled.a`
+  text-decoration: underline;
+`;
