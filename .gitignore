@@ -8,7 +8,6 @@
 
 # Build
 /dist
-dist/
 
 # User-specific files
 *.rsuser
