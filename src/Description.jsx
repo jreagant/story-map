@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Row } from './containers/flex';
 
-const Description = ({ summary }) => {
+const Description = ({ summary, extended }) => {
   return (
     <Row>
       <p>
