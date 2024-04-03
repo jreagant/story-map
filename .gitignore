@@ -3,6 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Environment
+.env
+
+# Build
+/dist
+dist/
+
 # User-specific files
 *.rsuser
 *.suo
