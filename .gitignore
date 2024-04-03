@@ -6,6 +6,9 @@
 # Environment
 .env
 
+# Build
+/dist
+
 # User-specific files
 *.rsuser
 *.suo
