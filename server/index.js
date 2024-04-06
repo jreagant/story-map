@@ -3,10 +3,10 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 
-const getNearbyLocations = require('./controllers/getNearbyLocations');
-const getWikiTitle = require('./controllers/getWikiTitle');
-const getImages = require('./controllers/getImages');
-const getHeroImage = require('./controllers/getHeroImage');
+const getNearbyLocations = require('./middleware/getNearbyLocations');
+const getWikiTitle = require('./middleware/getWikiTitle');
+const getImages = require('./middleware/getImages');
+const getHeroImage = require('./middleware/getHeroImage');
 
 const app = express();
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
     font-family: 'Noto Sans', sans-serif;
   }
@@ -12,3 +12,5 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 `;
+
+export default GlobalStyle;

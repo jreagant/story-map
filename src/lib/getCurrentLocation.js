@@ -1,26 +1,23 @@
-const getCurrentLocation = (prevLocation) => {
+// eslint-disable-next-line no-unused-vars
+const getCurrentLocation = (prevLocation) => new Promise((resolve, reject) => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
-      (position) => {
-        return ({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-          error: null,
-        });
-      },
-      (error) => {
-        return ((prevLocation) => ({
-          ...prevLocation,
-          error: error.message,
-        }));
-      }
+      (position) => resolve({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+        error: null,
+      }),
+      (error) => resolve({
+        ...prevLocation,
+        error: error.message,
+      }),
     );
   } else {
-    return ((prevLocation) => ({
+    resolve({
       ...prevLocation,
-      error: 'Geolocation not supported'
-    }));
+      error: 'Geolocation not supported',
+    });
   }
-}
+});
 
 export default getCurrentLocation;
