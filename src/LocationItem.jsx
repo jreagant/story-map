@@ -8,7 +8,7 @@ import {
   ReadButtonCol,
 } from './containers/flex';
 import { LocationNumber, PlaceName, PlaceAddress } from './styled/text';
-import ReadButton from './styled/button';
+import { ReadButton } from './styled/button';
 
 function LocationItem({ item, place, onLocationClick }) {
   const placeName = place.displayName.text;

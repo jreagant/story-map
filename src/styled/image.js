@@ -29,3 +29,26 @@ export const ImageThumb = styled.img`
   width: 100%;
   height: 100%;
 `;
+
+export const ModalImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+`;
+
+// max-width: 100%;
+// height: auto;
+// object-fit: cover;
+
+// position: absolute;
+// top: 50%;
+// left: 50%;
+// transform: translate(-50%, -50%);
+// max-width: 100%;
+// height: auto;
+// object-fit: cover;
+
+export const CloseModal = styled.img`
+  height: 30px;
+  width: 30px;
+`;

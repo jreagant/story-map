@@ -12,18 +12,19 @@ import getHeroImage from './lib/getHeroImage';
 import getImages from './lib/getImages';
 
 import heroPlaceholder from './assets/story-map-hero-loading.jpg';
+import sampleDescription from './sampleDescription';
 
 const { useEffect, useState } = React;
 
-function LocationDetail({ data }) {
+function LocationDetail({ data, modal }) {
   const [locationDesc, setLocationDesc] = useState('Loading...');
   const [heroImage, setHeroImage] = useState(heroPlaceholder);
   const [locationImages, setLocationImages] = useState([]);
 
   useEffect(() => {
-    fetchLocationDescriptions(data.name, data.address)
-      .then((result) => setLocationDesc(result.data))
-      .catch((error) => console.error(error));
+    // fetchLocationDescriptions(data.name, data.address)
+    //   .then((result) => setLocationDesc(result.data))
+    //   .catch((error) => console.error(error));
 
     getHeroImage(data.photo)
       .then((result) => setHeroImage(result.data))
@@ -44,13 +45,13 @@ function LocationDetail({ data }) {
         <h5>{data.address}</h5>
       </Row>
       <Row>
-        <Description description={locationDesc} />
+        <Description description={sampleDescription} />
       </Row>
       <Row>
         {locationImages.length > 0
           ? <h2>From the archives</h2>
           : <> </>}
-        <ImageGallery images={locationImages} />
+        <ImageGallery images={locationImages} modal={modal} />
       </Row>
     </Grid>
   );

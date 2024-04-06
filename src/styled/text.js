@@ -50,3 +50,13 @@ export const PlaceAddress = styled.p`
 export const Expand = styled.a`
   text-decoration: underline;
 `;
+
+export const ModalLink = styled.a`
+  color: white;
+  margin: 0; // Reset margin
+  padding: 0; // Reset padding
+  border: none; // Remove border
+  display: inline-block; // Remove any default block-level styling
+  position: absolute;
+  right: 0;
+`;

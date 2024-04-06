@@ -17,19 +17,19 @@ const { useState, useEffect } = React;
 // eslint-disable-next-line react/prop-types
 function Locations({ onLocationClick }) {
   const [location, setLocation] = useState({
-    latitude: null,
-    longitude: null,
+    latitude: 40.7971153,
+    longitude: -73.9584008,
     error: null,
   });
   const [nearbyList, setNearbyList] = useState([]);
 
   useEffect(() => {
-    const fetchLocation = async () => {
-      const loc = await getCurrentLocation(location);
-      setLocation(loc);
-    };
+    // const fetchLocation = async () => {
+    //   const loc = await getCurrentLocation(location);
+    //   setLocation(loc);
+    // };
 
-    fetchLocation();
+    // fetchLocation();
   }, []);
 
   useEffect(() => {
