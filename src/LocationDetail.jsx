@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
@@ -16,7 +18,7 @@ import sampleDescription from './sampleDescription';
 
 const { useEffect, useState } = React;
 
-function LocationDetail({ data, modal }) {
+function LocationDetail({ data, modal, nav }) {
   const [locationDesc, setLocationDesc] = useState('Loading...');
   const [heroImage, setHeroImage] = useState(heroPlaceholder);
   const [locationImages, setLocationImages] = useState([]);
@@ -37,6 +39,9 @@ function LocationDetail({ data, modal }) {
 
   return (
     <Grid>
+      <Row>
+        <h1 onClick={() => nav({ name: 'Locations', data: null })}>{'< Back'}</h1>
+      </Row>
       <HeroRow>
         <LocationHero src={heroImage} />
       </HeroRow>

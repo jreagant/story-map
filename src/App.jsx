@@ -28,7 +28,13 @@ function App() {
       {view.name === 'Locations'
       && <Locations onLocationClick={handleLocationClick} />}
       {view.name === 'LocationDetail'
-      && <LocationDetail data={view.data} modal={{ setModalData, setModalVisible }} />}
+      && (
+        <LocationDetail
+          data={view.data}
+          modal={{ setModalData, setModalVisible }}
+          nav={setView}
+        />
+      )}
     </>
   );
 }
